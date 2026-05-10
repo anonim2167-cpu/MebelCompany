@@ -1,0 +1,285 @@
+body{
+    background-color: rgba(219, 219, 219, 0.78);
+}
+
+header{
+    height: auto;
+    background-color: rgb(57, 57, 57);
+    color: antiquewhite;
+    align-items: center;
+    flex-wrap: wrap;
+    user-select: none; 
+    background: linear-gradient(to top, rgba(132, 132, 132, 0.897) ,rgb(39, 39, 39),rgb(39, 39, 39));
+    text-align: center;
+}
+
+nav{
+    background: linear-gradient(to bottom, rgba(132, 132, 132, 0.897) , rgba(74, 74, 74, 0.95), rgb(95, 94, 94));
+    height: 50px;
+    top: 0;
+    position: sticky;
+    z-index: 50;
+    padding: 10px;
+}
+
+nav > a{
+    min-height: 100px;
+    height: auto;
+    border-radius: 25%;
+    background-color: rgb(195, 195, 195);
+    text-decoration: none;
+    color: black;
+}
+
+.home{
+    width: 60px;
+    height: 30px;
+    border-radius: 10%;
+    background-color: rgba(212, 212, 212, 0.63);
+    color: antiquewhite;
+    text-align: center;
+    display: inline-block;
+    animation-duration: 2s;
+    animation-name: HomeB;
+    animation-iteration-count: infinite;
+    text-decoration: none;
+}
+
+@keyframes HomeB{
+    0%{transform: scale();}
+    50%{transform: scale(1.2);}
+}
+
+main{
+    background-color: rgba(97, 97, 97, 0.944);
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    z-index: 0;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 5px;
+    width: 15%;
+}
+aside > img{
+    top: 200px;
+    position: sticky;
+}
+
+section{
+    background-color: rgb(123, 123, 123);
+    flex: 66%;
+}
+
+.icon{
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+.ICONimg{
+    animation-duration: 2s;
+    animation-name: icon;
+    animation-iteration-count: infinite;
+}
+
+@keyframes icon{
+    0%{transform: rotate(0);}
+    10%{left: 10px;}
+    20%{left: 20px; transform: rotate(20deg);}
+    30%{bottom: 10px;}
+    40%{bottom: 20px;}
+    50%{transform: scaleY(1.2); transform: rotate(-20deg)}
+}
+
+.icon > img{
+   position: relative;
+    width: 50px;
+    height: 50px; 
+    padding: 2px;  
+}
+
+@media screen and (max-width: 700px) {
+    main, nav, article{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+    }
+    main{
+        font-size: xx-small;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main, nav, article{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 15px;
+    }
+    main{
+        font-size: smaller;
+    }
+
+    .menuPoziome{
+        display: flex;
+        flex-direction: row;
+        transform: scale(0.5);
+        transform-origin: left;
+    }
+}
+
+.menuPoziome > li > ul > li > a{
+    width: 170px;
+    height: 30px;
+    color: antiquewhite;
+    text-decoration: none;
+    transition: 1s;
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.menuPoziome > li > ul > li:hover{
+  color:rgb(0, 0, 0);
+  transform: scaleX(1.2);
+  display: inline-block;
+  text-align: center;
+}
+
+.menuPoziome > li > ul > li > a:hover{
+  color:rgb(0, 0, 0);
+  text-align: center;
+}
+
+.menuPoziome li{
+    transition: 1s;
+    user-select: none;
+}
+
+.menuPoziome{
+  list-style-type:none;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
+
+.menuPoziome ul{
+  display:none;
+  margin:0;
+  padding:5px;
+  transition: 1s;
+}
+
+
+.menuPoziome > li{
+  position: relative;
+  float:left;
+  width:150px;
+  height: 40px;
+  background-color:#333333;
+  border-top:1px solid rgb(112,112,112);
+  border-left:1px solid rgb(63,63,63);
+  color: antiquewhite;
+}
+
+li:hover, li a:hover{
+  background-color:rgb(141, 141, 141);
+}
+
+.menuPoziome li{
+  float:left;
+}
+
+.menuPoziome > li:hover > ul{
+    transition: 1s;
+}
+
+.menuPoziome > li > ul{
+    z-index: 40;
+}
+
+.menuPoziome ul{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  margin:0;
+  padding:5px;
+  list-style-type:none;
+  background-color:#333333;
+  transition: 1s;
+}
+
+.menuPoziome > li:hover  ul{
+  display:block;
+  padding-top: 10px;
+  transform: scale(1.2);
+}
+
+.menuPoziome li{
+  margin-left:-1px;
+  width:170px;
+}
+
+.nowosci{
+    display: inline-block;
+    animation-duration: 2s;
+    animation-name: NEWS;
+    animation-iteration-count: infinite;
+    transition: 1s;
+}
+
+@keyframes NEWS{
+    0%{transform: scale();}
+    50%{transform: scale(1.5); color: gold;}
+}
+
+.nowosci:hover{
+    transform: scale(1.5);
+}
+
+.ozdobnik{
+    width: 500px;
+    height: 2px;
+    display: flex;
+    animation-duration: 1s;
+    animation-name: OZDOBINK;
+    animation-iteration-count: infinite;
+    transition: 1s;
+    background-color: darksalmon;
+    align-items: center;
+}
+
+@keyframes OZDOBINK{
+    0%{transform: scale(1);}
+    50%{transform: scaleX(1.2)}
+}
+
+#wydarzenia ol{
+    width: auto;
+    height: auto;
+    transition: 1s;
+    display: flex;
+}
+
+#wydarzenia ol:hover{
+    transform: translateX(-100px);
+}
+
+footer{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgb(207, 207, 207);
+}
